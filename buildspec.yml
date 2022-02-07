@@ -1,0 +1,12 @@
+version: 0.2
+
+
+phases:
+  install:
+    commands:
+    - npm install --silent --no-progress -g npm
+    - npm install --silent --no-progress -g serverless
+  build:
+    commands:
+    - npm install -f
+    - serverless deploy --stage dev
